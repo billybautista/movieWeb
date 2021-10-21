@@ -21,7 +21,6 @@ export default function MovieDetail({ match: { params } }) {
     const recomendations = await getMovieRecomendations(id);
     const { results } = recomendations;
     setRecomendations(results);
-    console.log(results);
   };
 
   useEffect(() => {
@@ -57,7 +56,19 @@ export default function MovieDetail({ match: { params } }) {
               <h1 style={styles.title}>{movie.title}</h1>
               <div style={{ display: "flex" }}>
                 <p style={styles.p}>{movie.release_date}</p>
-                <p style={styles.p}>{movie.original_language}</p>
+                <div
+                  style={{
+                    backgroundColor: "white",
+                    paddingInline: 5,
+                    height: 30,
+                    borderRadius: 5,
+                    marginLeft: 20,
+                  }}
+                >
+                  <p style={{ color: "black", fontWeight: "bold" }}>
+                    {movie.original_language}
+                  </p>
+                </div>
               </div>
               <h1 style={styles.title}>Overview</h1>
               <p style={styles.p}>{movie.overview}</p>

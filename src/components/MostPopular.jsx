@@ -4,7 +4,7 @@ import MovieCard from "../components/MovieCard";
 export default function MostPopular({ mostPopular, movies }) {
   return (
     <div>
-      {movies.length !== 0 ? (
+      {movies && movies.length !== 0 ? (
         <MovieCard
           key={mostPopular.id}
           width="98%"

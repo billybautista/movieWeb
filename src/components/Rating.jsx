@@ -36,9 +36,6 @@ export default function StarRating({ value, onChange }) {
         <Rating
           name="simple-controlled"
           value={value}
-          // onChange={(event, newValue) => {
-          //   setValue(newValue);
-          // }}
           onChange={onChange}
           size="large"
           emptyIcon={<StarIcon style={{ color: "white" }} fontSize="large" />}

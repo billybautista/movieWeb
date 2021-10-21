@@ -12,7 +12,7 @@ export default function MovieCard({ width, poster_path, ranking, id }) {
       <Card>
         <CardActionArea>
           <Link href={`/movie/${id}`} underline="none">
-            <CardMedia component="img" image={uri} />
+            <CardMedia component="img" image={uri} alt="No encontrado" />
           </Link>
         </CardActionArea>
       </Card>
