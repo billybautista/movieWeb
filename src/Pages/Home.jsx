@@ -11,7 +11,6 @@ import LastMovies from "../components/LastMovies";
 import MostPopular from "../components/MostPopular";
 import Results from "../components/Results";
 import { getFilter } from "../helpers/getFilter";
-import MovieCard from "../components/MovieCard";
 
 export default function App() {
   const [movies, setMovies] = useState([]);
