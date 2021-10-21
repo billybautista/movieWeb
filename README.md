@@ -16,6 +16,7 @@ React
 axios
 materialUI
 react-bootstrap
+bootstrap
 
 ### Instrucciones para correr el frontend: 
 ```bash
