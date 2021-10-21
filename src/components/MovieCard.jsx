@@ -3,22 +3,15 @@ import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import { CardActionArea } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
-import { Link } from "react-router-dom";
+import Link from "@mui/material/Link";
 
 export default function MovieCard({ width, poster_path, ranking, id }) {
   const uri = `https://image.tmdb.org/t/p/w500/${poster_path}`;
-  const path = `/movie/${id}`;
   return (
-    <div style={{ width: width, margin: 4 }}>
+    <div key={id} style={{ width: width, margin: 4 }}>
       <Card>
         <CardActionArea>
-          <Link
-            to={path}
-            onClick={() => (window.location.href = `/movie/${id}`)}
-            style={{
-              textDecoration: "none",
-            }}
-          >
+          <Link href={`/movie/${id}`} underline="none">
             <CardMedia component="img" image={uri} />
           </Link>
         </CardActionArea>

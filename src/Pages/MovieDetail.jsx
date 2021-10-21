@@ -14,7 +14,6 @@ export default function MovieDetail({ match: { params } }) {
 
   const getMovie = async () => {
     const movieDetail = await getMovieDetail(id);
-    console.log(movieDetail);
     setMovie(movieDetail);
   };
 
@@ -87,6 +86,7 @@ export default function MovieDetail({ match: { params } }) {
           {recomendations !== undefined && recomendations.length !== 0
             ? recomendations.map((e) => (
                 <MovieCard
+                  key={e.id}
                   width="19%"
                   poster_path={e.poster_path}
                   ranking={e.vote_average}

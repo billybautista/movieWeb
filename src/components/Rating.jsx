@@ -1,15 +1,14 @@
-import * as React from "react";
+import React from "react";
 import Rating from "@mui/material/Rating";
 import Box from "@mui/material/Box";
 import StarIcon from "@mui/icons-material/Star";
 
-export default function HoverRating() {
-  const [value, setValue] = React.useState(0);
+export default function StarRating({ value, onChange }) {
+  // const [value, setValue] = useState(0);
   return (
     <div
       style={{
         display: "flex",
-
         heigth: 60,
         alignItems: "center",
       }}
@@ -18,8 +17,7 @@ export default function HoverRating() {
         style={{
           marginTop: 10,
           color: "white",
-          fontSize: 30,
-          heigth: 20,
+          fontSize: 20,
         }}
       >
         Rating:
@@ -38,9 +36,10 @@ export default function HoverRating() {
         <Rating
           name="simple-controlled"
           value={value}
-          onChange={(event, newValue) => {
-            setValue(newValue);
-          }}
+          // onChange={(event, newValue) => {
+          //   setValue(newValue);
+          // }}
+          onChange={onChange}
           size="large"
           emptyIcon={<StarIcon style={{ color: "white" }} fontSize="large" />}
         />
